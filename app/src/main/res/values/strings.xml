@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">Sistema Taller Automotriz</string>
+    <string name="app_subtitle">Gestión Taller - Fácil e Intuitivo</string>
+
+    <!-- Instrucciones Guiadas para Trabajadores -->
+    <string name="instruccion_dashboard">Toca el módulo que deseas gestionar:</string>
+    <string name="instruccion_modulo">💡 Usa el buscador para filtrar rápidamente o presiona + para agregar un nuevo registro.</string>
+
+    <!-- Búsquedas y Filtros -->
+    <string name="buscar_cliente_hint">🔍 Buscar cliente por Nombre, DNI o Teléfono...</string>
+    <string name="buscar_vehiculo_hint">🔍 Buscar por Placa, Marca o Modelo...</string>
+    <string name="buscar_servicio_hint">🔍 Buscar servicio por Descripción o Placa...</string>
+    <string name="buscar_repuesto_hint">🔍 Buscar por Nombre de pieza o Código QR...</string>
+    <string name="buscar_cita_hint">🔍 Buscar cita por Fecha, Hora o Cliente...</string>
+    <string name="sin_resultados">No se encontraron resultados para la búsqueda actual</string>
+
+    <!-- Módulos -->
+    <string name="modulo_clientes">1. Clientes</string>
+    <string name="desc_clientes">Gestión de Clientes y Teléfonos</string>
+
+    <string name="modulo_vehiculos">2. Vehículos</string>
+    <string name="desc_vehiculos">Registro de Autos y Placas</string>
+
+    <string name="modulo_servicios">3. Servicios</string>
+    <string name="desc_servicios">Reparaciones y Foto de Daño</string>
+
+    <string name="modulo_repuestos">4. Repuestos</string>
+    <string name="desc_repuestos">Stock y Escáner de QR</string>
+
+    <string name="modulo_citas">5. Citas</string>
+    <string name="desc_citas">Agenda y Programación</string>
+
+    <!-- Formatos y Etiquetas -->
+    <string name="dni_format">📄 DNI: %1$s</string>
+    <string name="telefono_format">📞 Teléfono: %1$s</string>
+    <string name="placa_format">🚘 PLACA: %1$s</string>
+    <string name="marca_modelo_format">%1$s - %2$s</string>
+    <string name="cliente_format">👤 Cliente: %1$s</string>
+    <string name="fecha_hora_format">📅 Fecha: %1$s  |  ⏰ Hora: %2$s</string>
+    <string name="fecha_format">📅 Fecha: %1$s</string>
+    <string name="stock_format">📦 Stock Disponible: %1$d unidades</string>
+    <string name="codigo_qr_format">🔍 Código QR: %1$s</string>
+    <string name="vehiculo_format">🚘 Vehículo: %1$s</string>
+
+    <!-- Hints -->
+    <string name="hint_nombre">Nombre y Apellidos del Cliente</string>
+    <string name="hint_dni">Número de DNI / Cédula</string>
+    <string name="hint_telefono">Teléfono de Contacto</string>
+    <string name="hint_placa">Placa del Vehículo (Ej. ABC-123)</string>
+    <string name="hint_marca">Marca (Ej. Toyota)</string>
+    <string name="hint_modelo">Modelo (Ej. Corolla)</string>
+    <string name="hint_fecha">Fecha del Servicio / Cita</string>
+    <string name="hint_hora">Hora asignada</string>
+    <string name="hint_codigo_qr">Código QR / Barras</string>
+    <string name="hint_nombre_repuesto">Nombre del Repuesto / Pieza</string>
+    <string name="hint_stock">Cantidad en Stock</string>
+    <string name="hint_descripcion">Detalle de la Reparación / Mantenimiento</string>
+    <string name="seleccionar_cliente">Paso 1: Seleccione el Cliente Propietario</string>
+    <string name="seleccionar_vehiculo">Paso 1: Seleccione el Vehículo</string>
+
+    <!-- Botones Flotantes Grandes -->
+    <string name="btn_agregar_cliente">+ NUEVO CLIENTE</string>
+    <string name="btn_agregar_vehiculo">+ NUEVO VEHÍCULO</string>
+    <string name="btn_agregar_servicio">+ NUEVO SERVICIO</string>
+    <string name="btn_agregar_repuesto">+ NUEVO REPUESTO</string>
+    <string name="btn_agregar_cita">+ NUEVA CITA</string>
+
+    <!-- Botones y Acciones -->
+    <string name="guardar">💾 GUARDAR REGISTRO</string>
+    <string name="cancelar">❌ CANCELAR</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="buscar">Buscar</string>
+    <string name="escanear_qr">📷 Escanear QR</string>
+    <string name="tomar_foto">📷 Adjuntar Foto del Daño</string>
+    <string name="confirmar_eliminar">¿Está seguro de eliminar este registro? Esta acción no se puede deshacer.</string>
+
+    <!-- Títulos y Estados -->
+    <string name="nuevo_cliente">Registrar Nuevo Cliente</string>
+    <string name="editar_cliente">Modificar Datos del Cliente</string>
+    <string name="nuevo_vehiculo">Registrar Nuevo Vehículo</string>
+    <string name="editar_vehiculo">Modificar Datos del Vehículo</string>
+    <string name="nueva_cita">Agendar Nueva Cita</string>
+    <string name="editar_cita">Modificar Cita</string>
+    <string name="nuevo_repuesto">Ingresar Repuesto al Inventario</string>
+    <string name="editar_repuesto">Modificar Repuesto</string>
+    <string name="nuevo_servicio">Registrar Nuevo Servicio Mecánico</string>
+    <string name="editar_servicio">Modificar Servicio</string>
+    <string name="campo_requerido">Por favor complete este campo obligatorio</string>
+    <string name="sin_clientes">Debe registrar al menos un cliente antes de continuar</string>
+    <string name="sin_vehiculos">Debe registrar al menos un vehículo antes de continuar</string>
+    <string name="no_hay_vehiculos">Aún no hay vehículos registrados</string>
+    <string name="no_hay_citas">No hay citas agendadas</string>
+    <string name="no_hay_repuestos">No hay repuestos registrados en stock</string>
+    <string name="no_hay_servicios">No hay servicios mecánicos registrados</string>
+    <string name="foto_capturada">✅ Foto de daño adjuntada con éxito</string>
+    <string name="qr_escaneado">✅ Código QR escaneado (Prototipo)</string>
+</resources>

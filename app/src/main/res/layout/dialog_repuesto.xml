@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nuevo_repuesto"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#0F172A"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCodigoQR"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/hint_codigo_qr"
+            app:hintTextColor="#64748B"
+            app:boxStrokeColor="#7C3AED">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCodigoQR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0F172A"
+                android:inputType="textCapCharacters" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEscanearQR"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/escanear_qr"
+            android:textColor="#7C3AED"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:strokeColor="#7C3AED"
+            app:strokeWidth="1.5dp"
+            app:icon="@drawable/ic_repuestos"
+            app:iconTint="#7C3AED" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNombreRepuesto"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_nombre_repuesto"
+        app:hintTextColor="#64748B"
+        app:boxStrokeColor="#7C3AED"
+        android:layout_marginBottom="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNombreRepuesto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#0F172A"
+            android:inputType="textCapWords" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilStock"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_stock"
+        app:hintTextColor="#64748B"
+        app:boxStrokeColor="#7C3AED"
+        android:layout_marginBottom="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#0F172A"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

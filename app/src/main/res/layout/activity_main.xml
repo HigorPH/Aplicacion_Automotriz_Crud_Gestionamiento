@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1E293B"
+        app:elevation="2dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/app_name"
+            app:titleTextColor="#FFFFFF"
+            app:subtitle="@string/app_subtitle"
+            app:subtitleTextColor="#CBD5E1" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="24dp">
+
+            <!-- Banner Resumen Ejecutivo -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E2E8F0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SISTEMA DE GESTIÓN TALLER"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#2563EB"
+                        android:letterSpacing="0.05"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Panel Principal"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#0F172A"
+                        android:layout_marginTop="2dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bienvenido. Seleccione un módulo para administrar los registros de su taller automotriz."
+                        android:textSize="13sp"
+                        android:textColor="#64748B"
+                        android:layout_marginTop="4dp"
+                        tools:ignore="HardcodedText" />
+
+                    <!-- Quick Indicator Badges -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_action_circle_edit"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="5 Módulos Activos"
+                            android:textColor="#2563EB"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/bg_badge_placa"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="Base de Datos Conectada"
+                            android:textColor="#059669"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Módulos Operativos"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#0F172A"
+                android:layout_marginBottom="12dp"
+                tools:ignore="HardcodedText" />
+
+            <!-- Vertical Stack of Clean Corporate Cards -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 1. Módulo Clientes -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardClientes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E2E8F0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="10dp"
+                            android:background="@drawable/bg_action_circle_edit"
+                            android:src="@drawable/ic_clientes"
+                            android:contentDescription="@string/modulo_clientes"
+                            app:tint="#2563EB" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/modulo_clientes"
+                                android:textStyle="bold"
+                                android:textSize="17sp"
+                                android:textColor="#0F172A" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/desc_clientes"
+                                android:textSize="13sp"
+                                android:textColor="#64748B"
+                                android:layout_marginTop="2dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Abrir ›"
+                            android:textColor="#2563EB"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 2. Módulo Vehículos -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardVehiculos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E2E8F0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="10dp"
+                            android:background="@drawable/bg_badge_placa"
+                            android:src="@drawable/ic_vehiculos"
+                            android:contentDescription="@string/modulo_vehiculos"
+                            app:tint="#059669" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/modulo_vehiculos"
+                                android:textStyle="bold"
+                                android:textSize="17sp"
+                                android:textColor="#0F172A" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/desc_vehiculos"
+                                android:textSize="13sp"
+                                android:textColor="#64748B"
+                                android:layout_marginTop="2dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Abrir ›"
+                            android:textColor="#059669"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 3. Módulo Servicios -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardServicios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E2E8F0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="10dp"
+                            android:background="#FFFBEB"
+                            android:src="@drawable/ic_servicios"
+                            android:contentDescription="@string/modulo_servicios"
+                            app:tint="#D97706" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/modulo_servicios"
+                                android:textStyle="bold"
+                                android:textSize="17sp"
+                                android:textColor="#0F172A" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/desc_servicios"
+                                android:textSize="13sp"
+                                android:textColor="#64748B"
+                                android:layout_marginTop="2dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Abrir ›"
+                            android:textColor="#D97706"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 4. Módulo Repuestos -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardRepuestos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E2E8F0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="10dp"
+                            android:background="@drawable/bg_badge_qr"
+                            android:src="@drawable/ic_repuestos"
+                            android:contentDescription="@string/modulo_repuestos"
+                            app:tint="#7C3AED" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/modulo_repuestos"
+                                android:textStyle="bold"
+                                android:textSize="17sp"
+                                android:textColor="#0F172A" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/desc_repuestos"
+                                android:textSize="13sp"
+                                android:textColor="#64748B"
+                                android:layout_marginTop="2dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Abrir ›"
+                            android:textColor="#7C3AED"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 5. Módulo Citas -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardCitas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E2E8F0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="10dp"
+                            android:background="@drawable/bg_badge_cita"
+                            android:src="@drawable/ic_citas"
+                            android:contentDescription="@string/modulo_citas"
+                            app:tint="#DC2626" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/modulo_citas"
+                                android:textStyle="bold"
+                                android:textSize="17sp"
+                                android:textColor="#0F172A" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/desc_citas"
+                                android:textSize="13sp"
+                                android:textColor="#64748B"
+                                android:layout_marginTop="2dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Abrir ›"
+                            android:textColor="#DC2626"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- Botón Cargar Datos Demo -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCargarDatosPrueba"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:text="Cargar Datos de Prueba (Simulación)"
+                android:textColor="#2563EB"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:strokeColor="#2563EB"
+                app:strokeWidth="1.5dp"
+                app:icon="@drawable/ic_add"
+                app:iconTint="#2563EB"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
